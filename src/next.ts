@@ -116,7 +116,7 @@ export function createImageHandler(
         png: "image/png",
       };
 
-      return new Response(result.buffer, {
+      return new Response(result.buffer as unknown as BodyInit, {
         status: 200,
         headers: {
           "Content-Type": mimeMap[result.format],
